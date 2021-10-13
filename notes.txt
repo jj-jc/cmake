@@ -7,3 +7,10 @@ It is possible to compile this program like:
 But this way is not optimized because it will take time to recompile everything, althoug it has been
 only a little change. The proper way to do it is to generate the object file or .o file to maintein it if the 
 c code that generates it has not been changed so it is not necessary to recompile it.
+
+------------------
+-------Cap2 ------
+------------------
+There are phony rules than let us execute things without create them. clean for example.
+You can write the make target you want. if you dont specify the target it will execute the first rule in the Makefile.
+If a rule has as dependencies other rules, it will be executed before.
