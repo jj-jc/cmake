@@ -1,18 +1,34 @@
-# This rule compiles the principal program.
-all: programa
+#These are two variables
+OBJS = main.o salida.o calculadora.o
+BINARY = programa
+CFLAGS = -g -Wall
+LDFLAGS = -l. 
 
-programa: main.o salida.o calculadora.o
-	gcc -o programa main.o salida.o calculadora.o
+x = Hello
+y = $(x) Adios #recursive variable
+y2 := $(x) Adios #Simple variable
+x = Adios
+# This rule compiles the principal program.
+all: $(BINARY)
+
+programa: $(OBJS)
+	gcc -o programa $(OBJS)
 
 main.o: main.c funciones.h
-	gcc -c main.c
+	gcc $(CFLAGS) -c main.c
 
 salida.o: salida.c funciones.h
-	gcc -c salida.c
+	gcc $(CFLAGS) -c salida.c
 
 calculadora.o: calculadora.c funciones.h
-	gcc -c calculadora.c 
+	gcc $(CFLAGS) -c calculadora.c 
 
 # This is a phony rule
 clean: 
-	rm -f programa *.o
+	rm -f $(BINARY) $(OBJS)
+
+print:
+	@echo $(x)
+#takes the value of the y right now
+	echo $(y) 
+	echo $(y2)

@@ -14,3 +14,13 @@ c code that generates it has not been changed so it is not necessary to recompil
 There are phony rules than let us execute things without create them. clean for example.
 You can write the make target you want. if you dont specify the target it will execute the first rule in the Makefile.
 If a rule has as dependencies other rules, it will be executed before.
+
+------------------
+-------Cap3 ------
+------------------
+It is possible to define variables which usually are in capital letters.
+Theare two types: simple and recursive.
+Simple: just store the information in the first place.
+Recursive: it can change its value during the make execution and it is evaluated the moment it is needed. It can be redefined.
+
+Make writes by the standard exit the command executed. In order to avoid that @ before the command
