@@ -1,0 +1,9 @@
+------------------
+-------Cap1 ------
+------------------
+It is possible to compile this program like:
+    gcc -o program main.c calculadora.c salida.c 
+
+But this way is not optimized because it will take time to recompile everything, althoug it has been
+only a little change. The proper way to do it is to generate the object file or .o file to maintein it if the 
+c code that generates it has not been changed so it is not necessary to recompile it.

@@ -1,0 +1,7 @@
+# This is a comment.
+## This is a rule example.
+target1: dependencies
+	instruccionts
+# This is another rule example.
+target2: dependencies target1
+	instruccionts
