@@ -30,3 +30,9 @@ Make writes by the standard exit the command executed. In order to avoid that @ 
 ------------------
 There are some unspoken rules in make that free you to write everything. This rules can help with c, c++, fortran, pascal
 an mucho more.
+
+------------------
+-------Cap5 ------
+------------------
+Make recompiles the files when the date of modification of the code is later than the object files. That way 
+only recompiles the files depending on the date of modification and for that reason is really more efective and faster.
