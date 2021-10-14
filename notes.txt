@@ -24,3 +24,9 @@ Simple: just store the information in the first place.
 Recursive: it can change its value during the make execution and it is evaluated the moment it is needed. It can be redefined.
 
 Make writes by the standard exit the command executed. In order to avoid that @ before the command
+
+------------------
+-------Cap4 ------
+------------------
+There are some unspoken rules in make that free you to write everything. This rules can help with c, c++, fortran, pascal
+an mucho more.
