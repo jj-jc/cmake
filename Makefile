@@ -9,14 +9,10 @@ LDFLAGS = -l.
 all: $(BINARY)
 
 programa: $(OBJS)
-	$(CC) -o programa $(OBJS)
+	$(CC) -o $@ $(OBJS)
 
-#this is an unspoken rule
-main.o: main.c funciones.h
-
-salida.o: salida.c funciones.h
-
-calculadora.o: calculadora.c funciones.h
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 # This is a phony rule
 clean: 

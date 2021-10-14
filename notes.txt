@@ -36,3 +36,15 @@ an mucho more.
 ------------------
 Make recompiles the files when the date of modification of the code is later than the object files. That way 
 only recompiles the files depending on the date of modification and for that reason is really more efective and faster.
+
+-------------------------------------
+-------Cap6 Automatic variables -----
+-------------------------------------
+Patterns: permits us to use with more flexibility some rules that we have defined.
+Thanks to the % simbol (works as * in linux) subtitues every word in that simbol. So %.o will take every .o file in the path.
+folder1/%.c means that can take every .o file inside folder1. 
+In order to controls the flow of this Patterns there are automatica variables (see doc of gnu make), some important variables are:
+
+$< First of the dependencies
+$? every dependencies
+$@ the name of the rule
