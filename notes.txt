@@ -48,3 +48,14 @@ In order to controls the flow of this Patterns there are automatica variables (s
 $< First of the dependencies
 $? every dependencies
 $@ the name of the rule
+
+-------------------------------------
+-------Cap7 Multiple files and rows--
+-------------------------------------
+With the include directive it is possible to call another file/s. 
+include src/Makefile windows/Makefile.windows
+
+For Spliting a long row in multiple ones \ and that's all.
+
+OBJ = main.o salid.o calculadora.o disco.o red.o \
+usb.o hardware.o
