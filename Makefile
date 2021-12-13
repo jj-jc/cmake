@@ -15,5 +15,6 @@ programa: $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # This is a phony rule
+.PHONY: clean # This way make will run as expected even if you have a file named clean.
 clean: 
 	rm -f $(BINARY) $(OBJS)
