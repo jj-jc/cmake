@@ -29,7 +29,7 @@ Make writes by the standard exit the command executed. In order to avoid that @ 
 -------Cap4 ------
 ------------------
 There are some unspoken rules in make that free you to write everything. This rules can help with c, c++, fortran, pascal
-an mucho more.
+an much more.
 
 ------------------
 -------Cap5 ------
@@ -43,7 +43,7 @@ only recompiles the files depending on the date of modification and for that rea
 Patterns: permits us to use with more flexibility some rules that we have defined.
 Thanks to the % simbol (works as * in linux) subtitues every word in that simbol. So %.o will take every .o file in the path.
 folder1/%.c means that can take every .o file inside folder1. 
-In order to controls the flow of this Patterns there are automatica variables (see doc of gnu make), some important variables are:
+In order to controls the flow of this Patterns there are automatic variables (see doc of gnu make), some important variables are:
 
 $< First of the dependencies
 $? every dependencies
@@ -80,3 +80,26 @@ clean:
   rm -rf *.o
 
 Some common make targets that are often phony are: all, install, clean, distclean, TAGS, info, check.
+
+--- Commly used symbols
+
+VAR ?= value 
+This will change the value of VAR to 'value' if it is not defined before. 
+
+
+--- Commly used functions
+
+$(wildcard pattern) : 
+The result of wildcard is a space-separated list of the names of existing files that match the pattern
+
+$(addsuffix suffix,names...) : 
+The value of suffix is appended to the end of each individual name and the resulting larger names 
+are concatenated with single spaces between them.
+
+$(addprefix prefix,names...) :
+The value of prefix is prepended to the front of each
+individual name and the resulting larger names are concatenated with single
+spaces between them.
+
+$(patsubst pattern,replacement,text) :
+Replace words matching pattern with replacement in text.
